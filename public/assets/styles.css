@@ -1,0 +1,87 @@
+body {
+    width: max-content;
+    margin: auto;
+    margin-top: 100px;
+}
+
+#gameBoardDiv {
+    display: inline-flex;
+}
+
+.dicePosition {
+    width: 100px;
+    margin-right: 5px;
+    margin-left: 5px;
+}
+
+#rollButton {
+    width: max-content;
+    margin: auto;
+    display: block;
+    margin-top: 30px;
+
+}
+
+#newGameButton {
+    width: max-content;
+    margin: auto;
+    display: block;
+    margin-top: 15px;
+}
+
+.button {
+    background-color: #8000ff;
+    color: #FFFFFF;
+    border-radius: 15px;
+    height: 40px;
+    min-width: 80px;
+    font-size: 18px;
+    padding-right: 15px;
+    padding-left: 15px;
+    border-style: none;
+    cursor: pointer;
+
+}
+
+/* CSS */
+.button-1 {
+  transition: color 100ms;
+  vertical-align: baseline;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.button:hover,
+.button:focus {
+    background-color: #9b37ff;
+    border: 3px solid #8000ff;
+}
+
+.button:disabled {
+    background-color: #5b5b5b;
+    border: 3px solid #464646;   
+}
+
+.text {
+    margin: auto;
+    margin-top: 30px;
+    width: max-content;
+}
+
+#scoreboard {
+    border-collapse: collapse;
+}
+
+#scoreboard th, #scoreboard td {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+.category-cell:hover {
+    background-color: #ddd;
+}
+
+.score-cell {
+    text-align: center;
+}
