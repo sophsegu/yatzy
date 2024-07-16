@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/styles.css">
+    <title>Yatzy Game</title>
+</head>
+<body>
+    <div id="gameBoardDiv">
+        <div style="width: 200px; display: inline-flex"></div>
+        <div style=" margin-left: 100px; margin-right: 100px;">
+            <div style="display: block">
+                <img id="position1" alt="1" src="./assets/dice1.png" class="dicePosition" onclick="onKeepDiceClicked(this)"></img>
+                <img id="position2" alt="1" src="./assets/dice1.png" class="dicePosition" onclick="onKeepDiceClicked(this)"></img>
+                <img id="position3" alt="1" src="./assets/dice1.png" class="dicePosition" onclick="onKeepDiceClicked(this)"></img>
+                <img id="position4" alt="1" src="./assets/dice1.png" class="dicePosition" onclick="onKeepDiceClicked(this)"></img>
+                <img id="position5" alt="1" src="./assets/dice1.png" class="dicePosition" onclick="onKeepDiceClicked(this)"></img>            
+            </div>
+
+
+            <div style="display: block;">
+                <p class="text">You have rolled <span id="turnCounter">0</span> times</p>
+
+                <button id="rollButton" class="button" onclick="onRollClick()">ROLL</button>
+                <button id="newGameButton" class="button" onclick="onNewGameClicked()">NEW GAME</button>            
+            </div>
+
+        </div>
+        <div style="width: 200px;">
+            <table id="scoreboard">
+                <tr>
+                    <th>Category</th>
+                    <th>Score</th>
+                </tr>
+                <tr>
+                    <td id="onesHeader" class="category-cell" onclick="OnOnesClicked()">Ones</td>
+                    <td id="onesCell" class="score-cell"></td>
+                </tr>
+                <tr>
+                    <td id="twosHeader" class="category-cell" onclick="OnTwosClicked()">Twos</td>
+                    <td id="twosCell" class="score-cell"></td>
+                </tr>
+                <tr>
+                    <td id="threesHeader" class="category-cell" onclick="OnThreesClicked()">Threes</td>
+                    <td id="threesCell" class="score-cell"></td>
+                </tr>
+                <tr>
+                    <td id="foursHeader" class="category-cell" onclick="OnFoursClicked()">Fours</td>
+                    <td id="foursCell" class="score-cell"></td>
+                </tr>
+                <tr>
+                    <td id="fivesHeader" class="category-cell" onclick="OnFivesClicked()">Fives</td>
+                    <td id="fivesCell" class="score-cell"></td>
+                </tr>
+                <tr>
+                    <td id="sixesHeader" class="category-cell" onclick="OnSixesClicked()">Sixes</td>
+                    <td id="sixesCell" class="score-cell"></td>
+                </tr>
+                <tr style="border-top: 2px solid black">
+                    <td>Sum</td>
+                    <td id="sumCell" class="score-cell"></td>
+                </tr>
+                <tr style="border-bottom: 2px solid black">
+                    <td>Bonus</td>
+                    <td id="bonusCell" class="score-cell"></td>
+                </tr>
+                <tr>
+                    <td id="onePairHeader" class="category-cell" onclick="OnOnePairClicked()">1 Pair</td>
+                    <td id="onePairCell" class="score-cell"></td>
+                </tr>
+                <tr>
+                    <td id="twoPairHeader" class="category-cell" onclick="OnTwoPairClicked()">2 Pair</td>
+                    <td id="twoPairCell" class="score-cell"></td>
+                </tr>
+                <tr>
+                    <td id="threeOfAKindHeader" class="category-cell" onclick="OnThreeOfAKindClicked()">3 of a kind</td>
+                    <td id="threeOfAKindCell" class="score-cell"></td>
+                </tr>
+                <tr>
+                    <td id="fourOfAKindHeader" class="category-cell" onclick="OnFourOfAKindClicked()">4 of a kind</td>
+                    <td id="fourOfAKindCell" class="score-cell"></td>
+                </tr>
+                <tr>
+                    <td id="smallStraightHeader" class="category-cell" onclick="OnSmallStraightClicked()">Small straight</td>
+                    <td id="smallStraightCell" class="score-cell"></td>
+                </tr>
+                <tr>
+                    <td id="largeStraightHeader" class="category-cell" onclick="OnLargeStraightClicked()">Large straight</td>
+                    <td id="largeStraightCell" class="score-cell"></td>
+                </tr>
+                <tr>
+                    <td id="fullHouseHeader" class="category-cell" onclick="OnFullHouseClicked()">Full house</td>
+                    <td id="fullHouseCell" class="score-cell"></td>
+                </tr>
+                <tr>
+                    <td id="chanceHeader" class="category-cell" onclick="OnChanceClicked()">Chance</td>
+                    <td id="chanceCell" class="score-cell"></td>
+                </tr>
+                <tr>
+                    <td id="yatzyHeader" class="category-cell" onclick="OnYatzyClicked()">Yatzy</td>
+                    <td id="yatzyCell" class="score-cell"></td>
+                </tr>
+                <tr style="border-top: 2px solid black">
+                    <td>Total</td>
+                    <td id="totalCell" class="score-cell"></td>
+                </tr>
+
+            </table>
+        </div>
+    </div>
+</body>
+
+<script src="./assets/dice.js"></script>
+<script src="./assets/yatzy_game.js"></script>
+<script src="./assets/yatzy_engine.js"></script>
+<script src="./assets/YatzyEngine.php"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+
+</html>
